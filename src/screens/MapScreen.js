@@ -3,10 +3,10 @@ import NavBar from "../components/NavBar";
 
 const MapScreen = () => {
   return (
-    <>
+    <div>
       <NavBar></NavBar>
       <Map></Map>
-    </>
+    </div>
   );
 };
 
