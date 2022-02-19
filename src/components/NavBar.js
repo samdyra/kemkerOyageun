@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const NavBar = () => {
   return (
     <div>
@@ -31,19 +33,28 @@ const NavBar = () => {
               </div>
               {/* <!-- primary nav --> */}
               <div className="flex items-center space-x-1">
-                <a className=" py-5 px-3 text-gray-700 hover:text-gray-900">
+                <Link
+                  to="/"
+                  className=" py-5 px-3 text-gray-700 hover:text-gray-900"
+                >
                   Web-GIS
-                </a>
-                <a className=" py-5 px-3 text-gray-700 hover:text-gray-900">
+                </Link>
+                <Link
+                  to="DownloadMapScreen"
+                  className=" py-5 px-3 text-gray-700 hover:text-gray-900"
+                >
                   Download map
-                </a>
+                </Link>
               </div>
             </div>
             {/* secondary nav */}
             <div className="flex items-center space-x-1">
-              <a className="py-2 px-3 bg-yellow-400 hover:bg-yellow-300 text-yellow-900 rounded hover:text-yellow-800 transition duration-300">
+              <Link
+                to="AboutScreen"
+                className="py-2 px-3 bg-yellow-400 hover:bg-yellow-300 text-yellow-900 rounded hover:text-yellow-800 transition duration-300"
+              >
                 About
-              </a>
+              </Link>
             </div>
           </div>
         </div>
