@@ -1,5 +1,7 @@
+import Map from "../components/Map";
+
 const DownloadMapScreen = () => {
-  return <div></div>;
+  return <Map styling={{ height: "calc(100vh - 64px)" }}></Map>;
 };
 
 export default DownloadMapScreen;

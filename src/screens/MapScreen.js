@@ -1,6 +1,7 @@
 import Map from "../components/Map";
 import MapDetails from "../components/MapDetails";
 import SettingsBar from "../components/SettingsBar";
+import data from "../shapefiles/itbCirebon.json";
 
 const MapScreen = () => {
   return (
@@ -33,6 +34,7 @@ const MapScreen = () => {
             boxShadow: "-2px 2px 5px 0 rgba(0,0,0,.4)",
             zIndex: 1,
           }}
+          studyArea={data}
         ></Map>
       </div>
     </div>
