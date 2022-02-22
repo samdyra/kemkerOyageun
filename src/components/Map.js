@@ -1,18 +1,29 @@
+import { Layer } from "leaflet";
 import { useState } from "react";
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 
 const Map = ({ styling, studyArea }) => {
-  const [state, setState] = useState("");
-  console.log(state);
-
+  const [name, setName] = useState("");
+  const [layer, setLayer] = useState("");
   const onEachPolygons = (feature, layer) => {
-    const borderWidth = feature.properties.NAME;
+    const borderName = feature.properties.NAME;
+    const borderLayer = feature.properties.LAYER;
+    function someFunc() {
+      setName(borderName);
+      setLayer(borderLayer);
+    }
     console.log(feature);
-    console.log(layer);
-    layer.bindPopup(borderWidth);
+    layer.on({
+      click: (event) => {
+        someFunc();
+      },
+    });
   };
   return (
     <>
+      <text>
+        {name}-{layer}
+      </text>
       <MapContainer
         center={[-6.664775841757377, 108.41674126660926]}
         zoom={16}
@@ -24,7 +35,6 @@ const Map = ({ styling, studyArea }) => {
         />
         <GeoJSON data={studyArea} onEachFeature={onEachPolygons}></GeoJSON>
       </MapContainer>
-      <text>{state}</text>
     </>
   );
 };

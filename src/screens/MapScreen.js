@@ -31,7 +31,7 @@ const MapScreen = () => {
             height: "100%",
             position: "relative",
             flex: "1 1 100%",
-            boxShadow: "-2px 2px 5px 0 rgba(0,0,0,.4)",
+            boxShadow: "-2px 2px 5px 0 rgba(0,.4,0,.4)",
             zIndex: 1,
           }}
           studyArea={data}
