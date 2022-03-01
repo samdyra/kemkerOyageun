@@ -36,7 +36,10 @@ const MapScreen = () => {
         {/* Maps Detail */}
         <div style={{ width: "600px", flex: "0 0 600px" }}>
           <text>
-            {name}-{layer}
+            <img
+              src="../components/hei.jpg"
+              style={{ height: "300px", width: "300px" }}
+            ></img>
           </text>
         </div>
         {/* Maps Detail */}
