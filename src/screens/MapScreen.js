@@ -2,17 +2,14 @@ import data from "../shapefiles/ITBJatinagor.json";
 import { useState } from "react";
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import noPic from "../images/no-image.jpg";
-
+import "../imageSlider.css";
 const MapScreen = () => {
   const [name, setName] = useState("");
-  const [clickedImage, setClickedImage] = useState("https://gdurl.com/ra7En");
   const [firstImage, setFirstImage] = useState("https://gdurl.com/ra7En");
   const [secondImage, setSecondImage] = useState("https://gdurl.com/ra7En");
   const [thirdImage, setThridImage] = useState("https://gdurl.com/ra7En");
-  const listOfImages = [firstImage, secondImage, thirdImage];
   const defaultFontSize = "24px";
   const secondaryFontSize = "20px";
-  console.log(clickedImage);
 
   const onEachPolygons = (feature, layer) => {
     const polygonName = feature.properties.OBJECTID;
@@ -92,50 +89,22 @@ const MapScreen = () => {
           </div>
           {/* Map Title */}
           {/* Map Images */}
-          <div
-            style={{
-              paddingTop: "15px",
-              display: "flex",
-              flexDirection: "row",
-            }}
-          >
-            {listOfImages.map((img) => {
-              <img
-                style={{ height: "360", width: "360", position: "relative" }}
-                src={img}
-                onClick={() => {
-                  setClickedImage(img);
-                }}
-              ></img>;
-            })}
-            <div style={{ display: "flex", flexDirection: "column" }}>
-              <img
-                src={firstImage}
-                style={{
-                  height: "120px",
-                  width: "120px",
-                  position: "relative",
-                }}
-              ></img>
-              <img
-                src={secondImage}
-                style={{
-                  height: "120px",
-                  width: "120px",
-                  position: "relative",
-                }}
-              ></img>
-              <img
-                src={thirdImage}
-                style={{
-                  height: "120px",
-                  width: "120px",
-                  position: "relative",
-                }}
-              ></img>
+          <div className="slider">
+            <div className="slides">
+              <input type="radio" name="radio-btn" id="radio1"></input>
+              <input type="radio" name="radio-btn" id="radio2"></input>
+              <input type="radio" name="radio-btn" id="radio3"></input>
+              <div className="slide first">
+                <img src={firstImage}></img>
+              </div>
+              <div className="slide">
+                <img src={secondImage}></img>
+              </div>
+              <div className="slide">
+                <img src={thirdImage}></img>
+              </div>
             </div>
           </div>
-          <text>{name}</text>
         </div>
         {/* Map Images */}
         {/* Maps Detail */}
