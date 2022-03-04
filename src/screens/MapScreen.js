@@ -5,17 +5,20 @@ import noPic from "../images/no-image.jpg";
 
 const MapScreen = () => {
   const [name, setName] = useState("");
+  const [clickedImage, setClickedImage] = useState("https://gdurl.com/ra7En");
   const [firstImage, setFirstImage] = useState("https://gdurl.com/ra7En");
   const [secondImage, setSecondImage] = useState("https://gdurl.com/ra7En");
   const [thirdImage, setThridImage] = useState("https://gdurl.com/ra7En");
-  const defaultFontSize = "30px";
+  const listOfImages = [firstImage, secondImage, thirdImage];
+  const defaultFontSize = "24px";
   const secondaryFontSize = "20px";
+  console.log(clickedImage);
 
   const onEachPolygons = (feature, layer) => {
-    const polygonName = feature.properties.Jenis_Obj;
+    const polygonName = feature.properties.OBJECTID;
     const firstImage = feature.properties.Foto_1;
     const secondImage = feature.properties.Foto_2;
-    const thirdImage = feature.properties.Foto_2;
+    const thirdImage = feature.properties.Foto_3;
 
     function someFunc() {
       setName(polygonName);
@@ -47,8 +50,8 @@ const MapScreen = () => {
         {/* Maps Detail */}
         <div
           style={{
-            width: "600px",
-            flex: "0 0 600px",
+            width: "540px",
+            flex: "0 0 540px",
             boxShadow: "-2px 2px 5px 0 rgba(0,0,0,.4)",
             zIndex: 3,
             position: "relative",
@@ -63,10 +66,10 @@ const MapScreen = () => {
               style={{
                 fontSize: defaultFontSize,
                 lineHeight: defaultFontSize * 1.3,
-                fontWeight: "600",
+                fontWeight: "550",
               }}
             >
-              Institut Teknologi Bandung
+              PETA INSTITUT TEKNOLOGI BANDUNG
             </text>
             <text
               style={{
@@ -75,7 +78,16 @@ const MapScreen = () => {
                 fontWeight: "400",
               }}
             >
-              Kampus Cirebon
+              1 : 25000
+            </text>
+            <text
+              style={{
+                fontSize: secondaryFontSize,
+                lineHeight: secondaryFontSize * 1.3,
+                fontWeight: "550",
+              }}
+            >
+              KAMPUS CIREBON
             </text>
           </div>
           {/* Map Title */}
@@ -84,32 +96,46 @@ const MapScreen = () => {
             style={{
               paddingTop: "15px",
               display: "flex",
-              flexDirection: "column",
+              flexDirection: "row",
             }}
           >
-            <img
-              src={firstImage}
-              style={{ height: "400px", width: "540px", position: "relative" }}
-            ></img>
-            <div style={{ display: "flex", flexDirection: "row" }}>
+            {listOfImages.map((img) => {
+              <img
+                style={{ height: "360", width: "360", position: "relative" }}
+                src={img}
+                onClick={() => {
+                  setClickedImage(img);
+                }}
+              ></img>;
+            })}
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <img
+                src={firstImage}
+                style={{
+                  height: "120px",
+                  width: "120px",
+                  position: "relative",
+                }}
+              ></img>
               <img
                 src={secondImage}
                 style={{
-                  height: "270px",
-                  width: "270px",
+                  height: "120px",
+                  width: "120px",
                   position: "relative",
                 }}
               ></img>
               <img
                 src={thirdImage}
                 style={{
-                  height: "270px",
-                  width: "270px",
+                  height: "120px",
+                  width: "120px",
                   position: "relative",
                 }}
               ></img>
             </div>
           </div>
+          <text>{name}</text>
         </div>
         {/* Map Images */}
         {/* Maps Detail */}
