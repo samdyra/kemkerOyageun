@@ -89,20 +89,42 @@ const MapScreen = () => {
           </div>
           {/* Map Title */}
           {/* Map Images */}
-          <div className="slider">
-            <div className="slides">
-              <input type="radio" name="radio-btn" id="radio1"></input>
-              <input type="radio" name="radio-btn" id="radio2"></input>
-              <input type="radio" name="radio-btn" id="radio3"></input>
-              <div className="slide first">
-                <img src={firstImage}></img>
+          <div>
+            <div className="slider">
+              <div className="slides">
+                {/* Radio buttons */}
+                <input type="radio" name="radio-btn" id="radio1"></input>
+                <input type="radio" name="radio-btn" id="radio2"></input>
+                <input type="radio" name="radio-btn" id="radio3"></input>
+                {/* Radio buttons */}
+                {/* Slide Images */}
+                <div className="slide first">
+                  <img src={firstImage}></img>
+                </div>
+                <div className="slide">
+                  <img src={secondImage}></img>
+                </div>
+                <div className="slide">
+                  <img src={thirdImage}></img>
+                </div>
+                {/* Slide Images */}
+                {/* automatic navigation */}
+                <div className="navigation-auto">
+                  <div className="auto-btn1"></div>
+                  <div className="auto-btn2"></div>
+                  <div className="auto-btn3"></div>
+                  <div className="auto-btn4"></div>
+                </div>
+                {/* automatic navigation */}
               </div>
-              <div className="slide">
-                <img src={secondImage}></img>
+              {/* Manual Navigation */}
+              <div className="navigation-manual">
+                <label for="radio1" className="manual-btn"></label>
+                <label for="radio1" className="manual-btn"></label>
+                <label for="radio1" className="manual-btn"></label>
+                <label for="radio1" className="manual-btn"></label>
               </div>
-              <div className="slide">
-                <img src={thirdImage}></img>
-              </div>
+              {/* Manual Navigation */}
             </div>
           </div>
         </div>
