@@ -126,8 +126,26 @@ const MapScreen = () => {
                 <h1>KETERANGAN</h1>
               </div>
               <div className="keterangan-content">
-                <p></p>
-                <div></div>
+                <div className="keterangan-judul">
+                  <p>Objek ID</p>
+                  <p>Jenis Objek</p>
+                  <p>Luas Area</p>
+                  <p>Koordinat X</p>
+                  <p>Koordinat Y</p>
+                  <p>Foto 1</p>
+                  <p>Foto 2</p>
+                  <p>Foto 3</p>
+                </div>
+                <div className="keterangan-data">
+                  <div>67</div>
+                  <div>Vektor Poligon</div>
+                  <div>678 ha</div>
+                  <div>-6.927348780149033</div>
+                  <div>107.7695420971685</div>
+                  <div>https://gdurl.com/yoY7a</div>
+                  <div>https://gdurl.com/yoY7a</div>
+                  <div>https://gdurl.com/yoY7a</div>
+                </div>
               </div>
             </div>
           </div>
