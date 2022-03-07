@@ -1,21 +1,19 @@
 .imageContainer {
-  height: 300px;
-  width: 300px;
+  /* border: 3px solid yellow; */
+  padding-top: 20px;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .slider {
-  width: 180px;
-  height: 180px;
-  border-radius: 10px;
+  width: 350px;
+  height: 350px;
+  border-radius: 5px;
   overflow: hidden;
 }
 
 .slides {
   width: 500%;
-  height: 500px;
+  height: 350px;
   display: flex;
 }
 
@@ -25,26 +23,46 @@
 
 .slide {
   width: 20%;
-  transition: 2s;
+  transition: 1s;
 }
 
 .slide img {
-  width: 180px;
-  height: 180px;
+  width: 350px;
+  height: 350px;
 }
 
 .navigation-manual {
   position: absolute;
-  width: 180px;
-  margin-top: -40px;
+  width: 350px;
+  margin-top: -24px;
   display: flex;
   justify-content: center;
 }
 
 .manual-btn {
-  border: 2px solid #40d3dc;
-  padding: 5px;
+  border: 3px solid #fff;
+  padding: 4px;
   border-radius: 10px;
   cursor: pointer;
   transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 40px;
+}
+
+.manual-btn:hover {
+  background: #40d3dc;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -40%;
 }

@@ -48,7 +48,7 @@ const NavBar = () => {
               </div>
             </div>
             {/* secondary nav */}
-            <div className="flex items-center space-x-1">
+            <div className="flex items-center space-x-1 pr-2">
               <Link
                 to="AboutScreen"
                 className="py-2 px-3 bg-yellow-400 hover:bg-yellow-300 text-yellow-900 rounded hover:text-yellow-800 transition duration-300"

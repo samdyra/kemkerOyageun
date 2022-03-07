@@ -2,3 +2,23 @@ html,
 body {
   margin: 0px;
 }
+
+/* Keterangan Start */
+.keterangan-container {
+  height: 20vh;
+  margin: 20px auto;
+  /* border: 3px solid yellow; */
+}
+
+.wrapper {
+}
+
+.keterangan-title {
+  font-size: 20px;
+  font-weight: 510;
+}
+
+.keterangan-content {
+}
+
+/* Keterangan End */ ;

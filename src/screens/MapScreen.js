@@ -1,8 +1,8 @@
 import data from "../shapefiles/ITBJatinagor.json";
 import { useState } from "react";
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
-import noPic from "../images/no-image.jpg";
 import "../imageSlider.css";
+
 const MapScreen = () => {
   const [name, setName] = useState("");
   const [firstImage, setFirstImage] = useState("https://gdurl.com/ra7En");
@@ -53,8 +53,8 @@ const MapScreen = () => {
             zIndex: 3,
             position: "relative",
             overflowY: "scroll",
-            paddingLeft: "20px",
-            paddingTop: "10px",
+            paddingLeft: "25px",
+            paddingTop: "15px",
           }}
         >
           {/* Map Title */}
@@ -89,7 +89,7 @@ const MapScreen = () => {
           </div>
           {/* Map Title */}
           {/* Map Images */}
-          <div>
+          <div className="imageContainer">
             <div className="slider">
               <div className="slides">
                 {/* Radio buttons */}
@@ -108,27 +108,31 @@ const MapScreen = () => {
                   <img src={thirdImage}></img>
                 </div>
                 {/* Slide Images */}
-                {/* automatic navigation */}
-                <div className="navigation-auto">
-                  <div className="auto-btn1"></div>
-                  <div className="auto-btn2"></div>
-                  <div className="auto-btn3"></div>
-                  <div className="auto-btn4"></div>
-                </div>
-                {/* automatic navigation */}
               </div>
               {/* Manual Navigation */}
               <div className="navigation-manual">
                 <label for="radio1" className="manual-btn"></label>
-                <label for="radio1" className="manual-btn"></label>
-                <label for="radio1" className="manual-btn"></label>
-                <label for="radio1" className="manual-btn"></label>
+                <label for="radio2" className="manual-btn"></label>
+                <label for="radio3" className="manual-btn"></label>
               </div>
               {/* Manual Navigation */}
             </div>
           </div>
+          {/* Map Images */}
+          {/* Keterangan Start */}
+          <div className="keterangan-container">
+            <div className="wrapper">
+              <div className="keterangan-title">
+                <h1>KETERANGAN</h1>
+              </div>
+              <div className="keterangan-content">
+                <p></p>
+                <div></div>
+              </div>
+            </div>
+          </div>
+          {/* Keterangan End */}
         </div>
-        {/* Map Images */}
         {/* Maps Detail */}
         {/* Maps */}
         <MapContainer
