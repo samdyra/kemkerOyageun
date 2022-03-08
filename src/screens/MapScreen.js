@@ -2,6 +2,7 @@ import data from "../shapefiles/ITBJatinagor.json";
 import { useState } from "react";
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import "../imageSlider.css";
+import itb from "../images/ITB.png";
 
 const MapScreen = () => {
   const [name, setName] = useState("");
@@ -128,7 +129,7 @@ const MapScreen = () => {
               <div className="keterangan-content">
                 <div className="keterangan-judul">
                   <p>Objek ID</p>
-                  <p>Jenis Objek</p>
+                  <p>Keterangan Objek</p>
                   <p>Luas Area</p>
                   <p>Koordinat X</p>
                   <p>Koordinat Y</p>
@@ -138,7 +139,7 @@ const MapScreen = () => {
                 </div>
                 <div className="keterangan-data">
                   <div>67</div>
-                  <div>Vektor Poligon</div>
+                  <div>Bangunan A</div>
                   <div>678 ha</div>
                   <div>-6.927348780149033</div>
                   <div>107.7695420971685</div>
@@ -149,6 +150,19 @@ const MapScreen = () => {
               </div>
             </div>
           </div>
+          {/* Keterangan End */}
+          {/* Penerbit Start */}
+          <div className="penerbit-container">
+            <img src={itb}></img>
+            <div className="penerbit-text-container">
+              <h1>DICETAK DAN DITERBITKAN OLEH:</h1>
+              <p>
+                Teknik Geodesi dan Geomatika ITB Jl. Ganesa No.10, Lb.
+                Siliwangi, Kecamatan Coblong, Kota Bandung, Jawa Barat 40132
+              </p>
+            </div>
+          </div>
+          {/* Penerbit End */}
           {/* Legenda Start */}
           <div className="legend-container">
             <div className="legend-title">
@@ -179,14 +193,14 @@ const MapScreen = () => {
               </div>
               <div className="legend-content">
                 <div className="legend-text">
-                  <p>Bangunan</p>
-                  <p>Sawah</p>
-                  <p>Irigasi</p>
-                  <p>Trek Lari</p>
-                  <p>Gerbang Depan</p>
-                  <p>Danau</p>
-                  <p>Lahan Kosong</p>
-                  <p>Perkebunan</p>
+                  <p>Tugu ITB</p>
+                  <p>Jalan</p>
+                  <p>Trotoar</p>
+                  <p>Gardu Listrik</p>
+                  <p>Lapangan Basket</p>
+                  <p>Hutan</p>
+                  <p>Sungai</p>
+                  <p>Rumah Warga</p>
                 </div>
                 <div className="legend-symbol">
                   <p>x</p>
@@ -202,7 +216,45 @@ const MapScreen = () => {
             </div>
           </div>
           {/* Legenda End */}
-          {/* Keterangan End */}
+          {/* Koordinat Referensi start */}
+          <div className="reference-container">
+            <div className="reference-title">
+              <h1>KOORDINAT REFERENSI</h1>
+            </div>
+            <div className="reference">
+              <p>Coordinate System</p>
+              <p>Projection</p>
+              <p>Datum Horizontal</p>
+              <p>Datum Vertikal</p>
+              <p>Satuan Tinggi</p>
+              <p>Selang Kontur</p>
+            </div>
+            <div className="reference-data">
+              <p>WGS 1984</p>
+              <p>Transverse Mercator</p>
+              <p>WGS84</p>
+              <p>DGN95</p>
+              <p>Meter</p>
+              <p>12,5 Meter</p>
+            </div>
+          </div>
+          {/* Koordinat Referensi end */}
+          {/* Footer Start */}
+          <div className="footer-container">
+            <div className="soc-info-container">
+              <div>
+                <div className="soc-title"></div>
+                <div className="soc-icon"></div>
+              </div>
+              <div className="info-container">
+                <h1></h1>
+                <p></p>
+                <p></p>
+              </div>
+            </div>
+            <div className="copyright"></div>
+          </div>
+          {/* Footer End */}
         </div>
         {/* Maps Detail */}
         {/* Maps */}

@@ -5,15 +5,15 @@
 }
 
 .slider {
-  width: 350px;
-  height: 350px;
+  width: 280px;
+  height: 280px;
   border-radius: 5px;
   overflow: hidden;
 }
 
 .slides {
   width: 500%;
-  height: 350px;
+  height: 280px;
   display: flex;
 }
 
@@ -27,13 +27,13 @@
 }
 
 .slide img {
-  width: 350px;
-  height: 350px;
+  width: 280px;
+  height: 280px;
 }
 
 .navigation-manual {
   position: absolute;
-  width: 350px;
+  width: 280px;
   margin-top: -24px;
   display: flex;
   justify-content: center;

@@ -74,7 +74,38 @@ body {
 }
 
 .legend-symbol p {
+}
+
+/* Legenda End */
+
+/* Penerbit start */
+.penerbit-container {
+  margin: 32px auto;
+  /* border: 2px solid yellow; */
+  display: flex;
+  /* padding-top: ; */
+}
+
+.penerbit-text-container {
+  width: 310px;
   /* border: 2px solid yellow; */
 }
 
-/* Legenda End */ ;
+.penerbit-container img {
+  width: 100px;
+  height: 100px;
+  /* border: 2px solid yellow; */
+}
+
+.penerbit-container h1 {
+  padding-left: 30px;
+  padding-top: 5px;
+}
+
+.penerbit-container p {
+  padding-top: 8px;
+  padding-left: 30px;
+  font-size: 14px;
+}
+
+/* Penerbit End */
