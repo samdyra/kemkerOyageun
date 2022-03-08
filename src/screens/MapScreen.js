@@ -241,18 +241,30 @@ const MapScreen = () => {
           {/* Koordinat Referensi end */}
           {/* Footer Start */}
           <div className="footer-container">
-            <div className="soc-info-container">
-              <div>
-                <div className="soc-title"></div>
-                <div className="soc-icon"></div>
+            <div className="soc-info-gdobrak-container">
+              <div className="gdobrak">
+                <img></img>
+                <img></img>
+              </div>
+              <div className="soc-container">
+                <div className="soc-title">
+                  <p>SOCIAL MEDIA</p>
+                </div>
+                <div className="soc-icon">
+                  <img></img>
+                  <img></img>
+                  <img></img>
+                </div>
               </div>
               <div className="info-container">
-                <h1></h1>
-                <p></p>
-                <p></p>
+                <h1>INFORMATION</h1>
+                <p>Privacy Police</p>
+                <p>Terms and Conditions</p>
               </div>
             </div>
-            <div className="copyright"></div>
+            <div className="copyright">
+              <p>Copyright © 2022 IMG-ITB. All rights reserved.</p>
+            </div>
           </div>
           {/* Footer End */}
         </div>
