@@ -149,6 +149,59 @@ const MapScreen = () => {
               </div>
             </div>
           </div>
+          {/* Legenda Start */}
+          <div className="legend-container">
+            <div className="legend-title">
+              <h1>LEGENDA</h1>
+            </div>
+            <div className="wrapper-legend">
+              <div className="legend-content">
+                <div className="legend-text">
+                  <p>Bangunan</p>
+                  <p>Sawah</p>
+                  <p>Irigasi</p>
+                  <p>Trek Lari</p>
+                  <p>Gerbang Depan</p>
+                  <p>Danau</p>
+                  <p>Lahan Kosong</p>
+                  <p>Perkebunan</p>
+                </div>
+                <div className="legend-symbol">
+                  <p>x</p>
+                  <p>x</p>
+                  <p>x</p>
+                  <p>x</p>
+                  <p>x</p>
+                  <p>x</p>
+                  <p>x</p>
+                  <p>x</p>
+                </div>
+              </div>
+              <div className="legend-content">
+                <div className="legend-text">
+                  <p>Bangunan</p>
+                  <p>Sawah</p>
+                  <p>Irigasi</p>
+                  <p>Trek Lari</p>
+                  <p>Gerbang Depan</p>
+                  <p>Danau</p>
+                  <p>Lahan Kosong</p>
+                  <p>Perkebunan</p>
+                </div>
+                <div className="legend-symbol">
+                  <p>x</p>
+                  <p>x</p>
+                  <p>x</p>
+                  <p>x</p>
+                  <p>x</p>
+                  <p>x</p>
+                  <p>x</p>
+                  <p>x</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Legenda End */}
           {/* Keterangan End */}
         </div>
         {/* Maps Detail */}
