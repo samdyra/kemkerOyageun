@@ -3,6 +3,11 @@ import { useState } from "react";
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import "../imageSlider.css";
 import itb from "../images/ITB.png";
+import github from "../images/github.png";
+import insta from "../images/instgrm.png";
+import twttr from "../images/twttr.png";
+import gd19 from "../images/logoGD19.png";
+import img from "../images/logoIMG.jpg";
 
 const MapScreen = () => {
   const [name, setName] = useState("");
@@ -253,27 +258,20 @@ const MapScreen = () => {
           <div className="footer-container">
             <div className="soc-info-gdobrak-container">
               <div className="gdobrak">
-                <img></img>
-                <img></img>
+                <img src={img}></img>
+                <img src={gd19}></img>
               </div>
               <div className="soc-container">
-                <div className="soc-title">
-                  <p>SOCIAL MEDIA</p>
-                </div>
+                <p>Reach us!</p>
                 <div className="soc-icon">
-                  <img></img>
-                  <img></img>
-                  <img></img>
+                  <img src={twttr}></img>
+                  <img src={insta}></img>
+                  <img src={github}></img>
                 </div>
-              </div>
-              <div className="info-container">
-                <h1>INFORMATION</h1>
-                <p>Privacy Police</p>
-                <p>Terms and Conditions</p>
               </div>
             </div>
             <div className="copyright">
-              <p>Copyright © 2022 IMG-ITB. All rights reserved.</p>
+              <p>Copyright © 2022 Tim Kemah Kerja 2019. All rights reserved.</p>
             </div>
           </div>
           {/* Footer End */}
