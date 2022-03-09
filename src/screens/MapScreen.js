@@ -155,7 +155,7 @@ const MapScreen = () => {
           <div className="penerbit-container">
             <img src={itb}></img>
             <div className="penerbit-text-container">
-              <h1>DICETAK DAN DITERBITKAN OLEH:</h1>
+              <h1>DIBUAT DAN DITERBITKAN OLEH:</h1>
               <p>
                 Teknik Geodesi dan Geomatika ITB Jl. Ganesa No.10, Lb.
                 Siliwangi, Kecamatan Coblong, Kota Bandung, Jawa Barat 40132
@@ -221,21 +221,31 @@ const MapScreen = () => {
             <div className="reference-title">
               <h1>KOORDINAT REFERENSI</h1>
             </div>
-            <div className="reference">
-              <p>Coordinate System</p>
-              <p>Projection</p>
-              <p>Datum Horizontal</p>
-              <p>Datum Vertikal</p>
-              <p>Satuan Tinggi</p>
-              <p>Selang Kontur</p>
-            </div>
-            <div className="reference-data">
-              <p>WGS 1984</p>
-              <p>Transverse Mercator</p>
-              <p>WGS84</p>
-              <p>DGN95</p>
-              <p>Meter</p>
-              <p>12,5 Meter</p>
+            <div className="reference-wrapper">
+              <div className="reference">
+                <p>Coordinate System </p>
+                <p>Projection</p>
+                <p>Datum Horizontal</p>
+                <p>Datum Vertikal</p>
+                <p>Satuan Tinggi</p>
+                <p>Selang Kontur</p>
+              </div>
+              <div className="titik-dua">
+                <p>:</p>
+                <p>:</p>
+                <p>:</p>
+                <p>:</p>
+                <p>:</p>
+                <p>:</p>
+              </div>
+              <div className="reference-data">
+                <p>WGS 1984</p>
+                <p>Transverse Mercator</p>
+                <p>WGS84</p>
+                <p>DGN95</p>
+                <p>Meter</p>
+                <p>12,5 Meter</p>
+              </div>
             </div>
           </div>
           {/* Koordinat Referensi end */}
