@@ -5,7 +5,7 @@
 }
 
 .slider {
-  width: 280px;
+  width: 420px;
   height: 280px;
   border-radius: 5px;
   overflow: hidden;
@@ -27,13 +27,13 @@
 }
 
 .slide img {
-  width: 280px;
+  width: 420px;
   height: 280px;
 }
 
 .navigation-manual {
   position: absolute;
-  width: 280px;
+  width: 420px;
   margin-top: -24px;
   display: flex;
   justify-content: center;

@@ -155,7 +155,7 @@ body {
 
 .soc-info-gdobrak-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .gdobrak {

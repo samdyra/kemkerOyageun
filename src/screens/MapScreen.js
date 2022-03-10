@@ -2,6 +2,7 @@ import data from "../shapefiles/ITBJatinagor.json";
 import { useState } from "react";
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import "../imageSlider.css";
+import baseMaps from "../shapefiles/baseMaps.json";
 import itb from "../images/ITB.png";
 import github from "../images/github.png";
 import insta from "../images/instgrm.png";
@@ -14,6 +15,12 @@ const MapScreen = () => {
   const [firstImage, setFirstImage] = useState("https://gdurl.com/ra7En");
   const [secondImage, setSecondImage] = useState("https://gdurl.com/ra7En");
   const [thirdImage, setThridImage] = useState("https://gdurl.com/ra7En");
+  const [basemapNormal, setBasemapNormal] = useState({
+    attribution: baseMaps[1].attribution,
+    url: baseMaps[1].url,
+  });
+  // console.table(basemapNormal);
+
   const defaultFontSize = "24px";
   const secondaryFontSize = "20px";
 
@@ -290,8 +297,8 @@ const MapScreen = () => {
           }}
         >
           <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            attribution={basemapNormal.attribution}
+            url={basemapNormal.url}
           />
           <GeoJSON data={data} onEachFeature={onEachPolygons}></GeoJSON>
         </MapContainer>
