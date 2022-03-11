@@ -1,17 +1,52 @@
 html,
 body {
   margin: 0px;
+  /* font-family: opensans; */
+}
+
+@font-face {
+  font-family: montserrat;
+  src: url(./fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: caladea;
+  src: url(./fonts/Caladea-Regular.ttf);
+}
+@font-face {
+  font-family: opensans;
+  src: url(./fonts/OpenSans-Regular.ttf);
 }
 
 /* Settings bar */
 
+.settings {
+  border-bottom: 1px solid rgb(204 204 204);
+  align-items: center;
+  /* display: flex; */
+  /* border: 3px solid yellow;   */
+}
+
 .setting-container {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid rgb(204 204 204);
+  /* border-bottom: 1px solid rgb(204 204 204); */
+  /* border: 3px solid yellow; */
   min-height: 40px;
+  max-width: 1280px;
   padding: 0 12px;
-  justify-content: center;
+  justify-content: flex-start;
+  margin: auto;
+  /* text-align: center; */
+}
+.setting-container p {
+  /* align-items: center; */
+  /* border: 1px solid rgb(204 204 204); */
+  margin-bottom: 4px;
+  margin-right: 10px;
+  /* text-align: center; */
+
+  /* padding: 12px; */
 }
 
 /* Settings bar end */
@@ -209,3 +244,125 @@ body {
 }
 
 /* Footer End */
+
+/* iOS Button */
+.form-switch {
+  display: inline-block;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  /* border: 3px solid yellow; */
+  display: flex;
+}
+
+.form-switch i {
+  position: relative;
+  display: inline-block;
+  margin-right: 0.5rem;
+  width: 46px;
+  height: 26px;
+  background-color: #e6e6e6;
+  border-radius: 23px;
+  vertical-align: text-bottom;
+  transition: all 0.3s linear;
+}
+.form-switch i::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 42px;
+  height: 22px;
+  background-color: #fff;
+  border-radius: 11px;
+  transform: translate3d(2px, 2px, 0) scale3d(1, 1, 1);
+  transition: all 0.25s linear;
+}
+.form-switch i::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24);
+  transform: translate3d(2px, 2px, 0);
+  transition: all 0.2s ease-in-out;
+}
+.form-switch:active i::after {
+  width: 28px;
+  transform: translate3d(2px, 2px, 0);
+}
+.form-switch:active input:checked + i::after {
+  transform: translate3d(16px, 2px, 0);
+}
+.form-switch input {
+  display: none;
+}
+.form-switch input:checked + i {
+  background-color: #4bd763;
+}
+.form-switch input:checked + i::before {
+  transform: translate3d(18px, 2px, 0) scale3d(0, 0, 0);
+}
+.form-switch input:checked + i::after {
+  transform: translate3d(22px, 2px, 0);
+}
+/* iOS Button */
+
+/* The dropdown container */
+.dropdown {
+  margin-left: 50px;
+  overflow: hidden;
+  border: 3px solid yellow;
+  width: 200px;
+  height: 30px;
+  /* padding-bottom: 50px; */
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}

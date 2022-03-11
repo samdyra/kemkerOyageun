@@ -9,6 +9,8 @@ import insta from "../images/instgrm.png";
 import twttr from "../images/twttr.png";
 import gd19 from "../images/logoGD19.png";
 import img from "../images/logoIMG.jpg";
+import lightMode from "../images/light.png";
+import nightMode from "../images/night.png";
 
 const MapScreen = () => {
   const light = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
@@ -51,14 +53,36 @@ const MapScreen = () => {
       ref.current.setUrl(colorMode === "light" ? light : dark);
     }
   }, [colorMode]);
+
   return (
-    <div className="h-[calc(100vh_-_104px)] ">
+    <div className="h-[calc(100vh_-_107px)] ">
       {/* Settings Bar */}
-      <div className="setting-container">
-        <button type="button" onClick={onClick}>
-          click me
-        </button>
+      <div className="settings">
+        <div className="setting-container">
+          <p>Basemap Styling</p>
+          <img
+            src={lightMode}
+            style={{ height: "20px", width: "20px", marginRight: "7px" }}
+          ></img>
+          <label className="form-switch">
+            <input onClick={onClick} type="checkbox" />
+            <i></i>
+          </label>
+          <img src={nightMode} style={{ height: "20px", width: "20px" }}></img>
+          <div class="dropdown">
+            <button class="dropbtn">
+              Dropdown
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+        </div>
       </div>
+
       {/* Settings Bar end*/}
       <div className="flex flex-row-reverse h-[100%]">
         {/* Maps Detail */}
@@ -287,6 +311,10 @@ const MapScreen = () => {
             </div>
           </div>
           {/* Footer End */}
+
+          {/* <div id="capture" style={{ padding: "10px", background: "#f5da55" }}>
+            <h4>Hello world!</h4>
+          </div> */}
         </div>
         {/* Maps Detail */}
         {/* Maps */}
