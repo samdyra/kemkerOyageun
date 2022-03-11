@@ -27,13 +27,20 @@ body {
   /* border: 3px solid yellow;   */
 }
 
+.pembatas {
+  width: 1px;
+  border: 1px solid rgb(204 204 204);
+  height: 26px;
+  margin: 0 20px 0 20px;
+}
+
 .setting-container {
   display: flex;
   align-items: center;
   /* border-bottom: 1px solid rgb(204 204 204); */
   /* border: 3px solid yellow; */
   min-height: 40px;
-  max-width: 1280px;
+  max-width: 1300px;
   padding: 0 12px;
   justify-content: flex-start;
   margin: auto;
@@ -309,13 +316,23 @@ body {
 }
 /* iOS Button */
 
+/* Dropdown Start */
+
 /* The dropdown container */
 .dropdown {
-  margin-left: 50px;
+  /* margin-left: 50px; */
   overflow: hidden;
-  border: 3px solid yellow;
-  width: 200px;
-  height: 30px;
+  /* padding-right: -12px; */
+  /* border: 3px solid yellow; */
+  /* width: 200px; */
+  /* height: 30px; */
+  /* text-align: ; */
+  /* text-align: left; */
+  /* justify-content: center; */
+  margin-top: -7px;
+  margin-bottom: -6px;
+  z-index: 3;
+
   /* padding-bottom: 50px; */
 }
 
@@ -334,7 +351,7 @@ body {
 /* Add a red background color to navbar links on hover */
 .navbar a:hover,
 .dropdown:hover .dropbtn {
-  background-color: red;
+  /* background-color: red; */
 }
 
 /* Dropdown content (hidden by default) */
@@ -344,17 +361,18 @@ body {
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  z-index: 3;
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
   float: none;
   color: black;
-  padding: 12px 16px;
+  padding: 12px 12px;
   text-decoration: none;
   display: block;
   text-align: left;
+  font-size: small;
 }
 
 /* Add a grey background color to dropdown links on hover */
@@ -366,3 +384,5 @@ body {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+/* Dropdown Start */

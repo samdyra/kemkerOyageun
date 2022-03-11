@@ -59,6 +59,7 @@ const MapScreen = () => {
       {/* Settings Bar */}
       <div className="settings">
         <div className="setting-container">
+          <div className="pembatas"></div>
           <p>Basemap Styling</p>
           <img
             src={lightMode}
@@ -69,17 +70,19 @@ const MapScreen = () => {
             <i></i>
           </label>
           <img src={nightMode} style={{ height: "20px", width: "20px" }}></img>
+          <div className="pembatas"></div>
           <div class="dropdown">
             <button class="dropbtn">
-              Dropdown
+              Download Data
               <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
+              <a href="#">Polygon</a>
+              <a href="#">Contour Lines</a>
+              <a href="#">Map Layout</a>
             </div>
           </div>
+          <div className="pembatas"></div>
         </div>
       </div>
 
