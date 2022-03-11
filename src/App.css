@@ -3,6 +3,19 @@ body {
   margin: 0px;
 }
 
+/* Settings bar */
+
+.setting-container {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgb(204 204 204);
+  min-height: 40px;
+  padding: 0 12px;
+  justify-content: center;
+}
+
+/* Settings bar end */
+
 /* Keterangan Start */
 .keterangan-container {
   height: auto;

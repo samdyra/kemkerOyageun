@@ -1,5 +1,5 @@
 import data from "../shapefiles/ITBJatinagor.json";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import "../imageSlider.css";
 import baseMaps from "../shapefiles/baseMaps.json";
@@ -11,15 +11,14 @@ import gd19 from "../images/logoGD19.png";
 import img from "../images/logoIMG.jpg";
 
 const MapScreen = () => {
+  const light = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
+  const dark =
+    "https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png";
   const [name, setName] = useState("");
   const [firstImage, setFirstImage] = useState("https://gdurl.com/ra7En");
   const [secondImage, setSecondImage] = useState("https://gdurl.com/ra7En");
   const [thirdImage, setThridImage] = useState("https://gdurl.com/ra7En");
-  const [basemapNormal, setBasemapNormal] = useState({
-    attribution: baseMaps[1].attribution,
-    url: baseMaps[1].url,
-  });
-  // console.table(basemapNormal);
+  const [colorMode, setColorMode] = useState("light");
 
   const defaultFontSize = "24px";
   const secondaryFontSize = "20px";
@@ -42,20 +41,25 @@ const MapScreen = () => {
       },
     });
   };
+  const onClick = () => {
+    setColorMode((colorMode) => (colorMode === "light" ? "dark" : "light"));
+  };
+
+  const ref = useRef(null);
+  useEffect(() => {
+    if (ref.current) {
+      ref.current.setUrl(colorMode === "light" ? light : dark);
+    }
+  }, [colorMode]);
   return (
     <div className="h-[calc(100vh_-_104px)] ">
       {/* Settings Bar */}
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          borderBottom: "1px solid rgb(204 204 204)",
-          minHeight: "40px",
-          padding: "0px 12px",
-          justifyContent: "center",
-        }}
-      ></div>
-      {/* Settings Bar */}
+      <div className="setting-container">
+        <button type="button" onClick={onClick}>
+          click me
+        </button>
+      </div>
+      {/* Settings Bar end*/}
       <div className="flex flex-row-reverse h-[100%]">
         {/* Maps Detail */}
         <div
@@ -81,6 +85,7 @@ const MapScreen = () => {
             >
               PETA INSTITUT TEKNOLOGI BANDUNG
             </text>
+
             <text
               style={{
                 fontSize: secondaryFontSize,
@@ -296,10 +301,7 @@ const MapScreen = () => {
             zIndex: 0,
           }}
         >
-          <TileLayer
-            attribution={basemapNormal.attribution}
-            url={basemapNormal.url}
-          />
+          <TileLayer ref={ref} url={colorMode === "light" ? light : dark} />
           <GeoJSON data={data} onEachFeature={onEachPolygons}></GeoJSON>
         </MapContainer>
         {/* Maps */}
