@@ -1,6 +1,6 @@
 import data from "../shapefiles/ITBJatinagor.json";
 import { useState, useRef, useEffect } from "react";
-import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
+import { MapContainer, TileLayer, GeoJSON, ScaleControl } from "react-leaflet";
 import "../imageSlider.css";
 import baseMaps from "../shapefiles/baseMaps.json";
 import itb from "../images/ITB.png";
@@ -11,12 +11,13 @@ import gd19 from "../images/logoGD19.png";
 import img from "../images/logoIMG.jpg";
 import lightMode from "../images/light.png";
 import nightMode from "../images/night.png";
+import search from "../images/search.png";
 
 const MapScreen = () => {
   const light = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
   const dark =
     "https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png";
-  const [name, setName] = useState("");
+  const [polygonName, setName] = useState("");
   const [firstImage, setFirstImage] = useState("https://gdurl.com/ra7En");
   const [secondImage, setSecondImage] = useState("https://gdurl.com/ra7En");
   const [thirdImage, setThridImage] = useState("https://gdurl.com/ra7En");
@@ -60,7 +61,15 @@ const MapScreen = () => {
       <div className="settings">
         <div className="setting-container">
           <div className="pembatas"></div>
-          <p>Basemap Styling</p>
+
+          <div className="search-container">
+            <div className="topnav">
+              <input type="text" placeholder="Search.." />
+            </div>
+            <img src={search} style={{ height: "18px", width: "18px" }}></img>
+          </div>
+          <div className="pembatas"></div>
+          <p>Basemap Mode</p>
           <img
             src={lightMode}
             style={{ height: "20px", width: "20px", marginRight: "7px" }}
@@ -334,6 +343,7 @@ const MapScreen = () => {
         >
           <TileLayer ref={ref} url={colorMode === "light" ? light : dark} />
           <GeoJSON data={data} onEachFeature={onEachPolygons}></GeoJSON>
+          <ScaleControl position="topright"></ScaleControl>
         </MapContainer>
         {/* Maps */}
       </div>

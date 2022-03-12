@@ -4,6 +4,10 @@ body {
   /* font-family: opensans; */
 }
 
+input:focus {
+  outline: none;
+}
+
 @font-face {
   font-family: montserrat;
   src: url(./fonts/Montserrat-Regular.ttf);
@@ -24,7 +28,8 @@ body {
   border-bottom: 1px solid rgb(204 204 204);
   align-items: center;
   /* display: flex; */
-  /* border: 3px solid yellow;   */
+  /* border: 3px solid yellow;
+  width: fit-content; */
 }
 
 .pembatas {
@@ -385,4 +390,33 @@ body {
   display: block;
 }
 
-/* Dropdown Start */
+/* Dropdown end */
+
+.search-container {
+  display: flex;
+  flex-direction: row;
+  /* border: 1px solid yellow; */
+  align-items: center;
+}
+
+.search-container img {
+  justify-content: center;
+}
+
+.topnav {
+  /* border: 1px solid yellow; */
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  /* border-bottom-style: 1px solid #b1b1b1; */
+  border-bottom: 1px solid #b1b1b1;
+}
+
+.topnav:focus {
+  outline: none;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+}
+
+/* Search bar start */
