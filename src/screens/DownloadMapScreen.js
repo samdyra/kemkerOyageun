@@ -2,7 +2,7 @@ import { MapContainer, TileLayer } from "react-leaflet";
 
 const DownloadMapScreen = () => {
   return (
-    <div style={{ height: "calc(100vh - 64px)" }}>
+    <div style={{ height: "calc(100vh - 66px)" }}>
       <MapContainer
         center={[-6.664775841757377, 108.41674126660926]}
         zoom={16}
